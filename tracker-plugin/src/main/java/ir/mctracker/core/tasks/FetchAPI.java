@@ -35,11 +35,9 @@ public class FetchAPI extends BukkitRunnable {
                 if (!exists) {
                     vote.create();
                 }
-
-                if (vote.isExpired()) {
-                    vote.delete();
-                }
             }
+
+            Vote.pruneRedeemedExpired();
         }
     }
 }

@@ -1,6 +1,7 @@
 package ir.mctracker.core.database.models;
 
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.stmt.DeleteBuilder;
 import com.j256.ormlite.table.DatabaseTable;
 import ir.mctracker.core.MCTrackerVote;
 import lombok.Getter;
@@ -69,9 +70,26 @@ public class Vote {
         }
     }
 
+    private static final long RETENTION_SECONDS = 60L * 60L * 24L;
+
     public boolean isExpired() {
         long nowSeconds = System.currentTimeMillis() / 1000L;
-        return (nowSeconds - this.votedAt) > (60L * 60L * 24L);
+        return (nowSeconds - this.votedAt) > RETENTION_SECONDS;
+    }
+        
+    public static int pruneRedeemedExpired() {
+        try {
+            int cutoff = (int) ((System.currentTimeMillis() / 1000L) - RETENTION_SECONDS);
+            DeleteBuilder<Vote, String> deleteBuilder = MCTrackerVote.getVotesDao().deleteBuilder();
+            deleteBuilder.where()
+                    .eq("redeemed", true)
+                    .and()
+                    .lt("voted_at", cutoff);
+            return deleteBuilder.delete();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 
     public boolean delete() {
