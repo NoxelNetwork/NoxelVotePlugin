@@ -1,4 +1,4 @@
-# MCTrackerVote
+# NoxelVoteSystem
 
 NoxelVoteing System forked from offical IRMCTracke ,  plugin for handling player votes server-side
 
