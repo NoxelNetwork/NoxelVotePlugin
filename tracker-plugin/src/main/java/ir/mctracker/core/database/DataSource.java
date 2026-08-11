@@ -1,7 +1,7 @@
 package ir.mctracker.core.database;
 
 import com.j256.ormlite.dao.DaoManager;
-import com.j256.ormlite.jdbc.JdbcConnectionSource;
+import com.j256.ormlite.jdbc.JdbcPooledConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import ir.jeykey.megacore.config.premade.Storage;
@@ -23,7 +23,9 @@ public class DataSource {
 
         String databaseUrl = "jdbc:sqlite:" + MCTrackerVote.getInstance().getDataFolder() + "/data.db";
 
-        connectionSource = new JdbcConnectionSource(databaseUrl);
+        JdbcPooledConnectionSource source = new JdbcPooledConnectionSource(databaseUrl);
+        source.setTestBeforeGet(true);
+        connectionSource = source;
 
         setupTables();
     }
@@ -31,7 +33,9 @@ public class DataSource {
     public static void MySQL() throws SQLException {
         String databaseUrl = "jdbc:mysql://" + Storage.MYSQL_HOST + ":" + Storage.MYSQL_PORT + "/" + Storage.MYSQL_DB + "?useSSL=false&autoReconnect=true";
 
-        connectionSource = new JdbcConnectionSource(databaseUrl, Storage.MYSQL_USERNAME, Storage.MYSQL_PASSWORD);
+        JdbcPooledConnectionSource source = new JdbcPooledConnectionSource(databaseUrl, Storage.MYSQL_USERNAME, Storage.MYSQL_PASSWORD);
+        source.setTestBeforeGet(true);
+        connectionSource = source;
 
         setupTables();
     }
