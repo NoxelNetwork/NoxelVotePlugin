@@ -7,14 +7,8 @@ import org.bukkit.event.HandlerList;
 public class PlayerVoteEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
 
-    //When the server is attempting to give the reward to the player, which means the player vote is registered.
     private final OfflinePlayer player;
 
-    /**
-     * Creating an event.
-     *
-     * @param player the player that voted
-     */
     public PlayerVoteEvent(OfflinePlayer player) {
         this.player = player;
     }
@@ -28,9 +22,6 @@ public class PlayerVoteEvent extends Event {
         return handlers;
     }
 
-    /**
-     * @return returns the player that voted
-     */
     public OfflinePlayer getPlayer() {
         return this.player;
     }

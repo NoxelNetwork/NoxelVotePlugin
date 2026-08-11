@@ -11,16 +11,10 @@ public class PlayerPreVoteEvent extends Event implements Cancellable {
     private boolean isCancelled = false;
     private final Player player;
 
-    /**
-     * @param player the online player that is trying to vote (does not mean he voted!)
-     */
     public PlayerPreVoteEvent(Player player) {
         this.player = player;
     }
 
-    /**
-     * @return returns the player that is trying to vote
-     */
     public Player getPlayer() {
         return this.player;
     }
