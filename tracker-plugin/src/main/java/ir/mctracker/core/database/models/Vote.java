@@ -70,7 +70,8 @@ public class Vote {
     }
 
     public boolean isExpired() {
-        return this.votedAt - System.currentTimeMillis() > ((60 * 60) * 24);
+        long nowSeconds = System.currentTimeMillis() / 1000L;
+        return (nowSeconds - this.votedAt) > (60L * 60L * 24L);
     }
 
     public boolean delete() {
