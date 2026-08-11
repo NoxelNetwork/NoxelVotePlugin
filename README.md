@@ -1,10 +1,10 @@
 # MCTrackerVote
 
-IRMCTracker official plugin for handling player votes server-side
+NoxelVoteing System forked from offical IRMCTracke ,  plugin for handling player votes server-side
 
 ## Documentations
 
-You can find our documentations [here](https://docs.mctracker.ir/mctrackervote-plugin/overview)
+Fully changed by Macronis to fit for NoxelSMP
 
 ## Downloads
 
@@ -17,33 +17,9 @@ please contact us via discord tickers.
 
 Tested MineCraft Version
 
-- Paper 1.8.8 (Java 1.8 (Outdated) /Java 1.11)
-- CarbonSpigot 1.8.8 (Java 1.11/1.17)
-- Paper 1.12.2 (Java 1.8 / Java 1.11)
-- Paper 1.13.2 (Java 1.11)
-- Paper 1.16.5 (Java 1.11)
-- Paper 1.17.1 (Java 1.16/1.17)
-- Paper 1.18.2 (Java 1.18)
-- Paper 1.19.4 (Java 1.18)
-- Paper 1.20.1 (Java 1.18) (Purpur recommended.)
+- NoxelPufferfish  26.1.2 (Java 25 ~ Folia Safe regions / over the bukkit syc)
 
- It's recommended to use LTS Versions of Java (11/17) as they are stable.
- Removed Java 8 as an outdated version, Unsupported.
-
-## You have any issues / suggestions??
-
-We're always here to solve your problems or convert your ideas into codes! You can create issues on our official Github
-Repo or contact us through our discord server
-
-## Our Discord
-
-<img src="https://discordapp.com/api/guilds/866287155641843722/widget.png?style=banner1" alt="Discord Banner 1"/>
-
-https://discord.gg/YScSMwTFZq
-
-## Contributing
-
-Pull requests are welcomed. For major changes, please open an issue first to discuss what you would like to change.
+ It's recommended to use contact me on telegram @RiftFox_YT for setuping this 
 
 ## License
 
