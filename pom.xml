@@ -60,10 +60,6 @@
 
     <repositories>
         <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/content/groups/public/</url>
-        </repository>
-        <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
@@ -89,7 +85,7 @@
         <dependency>
             <groupId>com.github.Alijkaz</groupId>
             <artifactId>MegaCore</artifactId>
-            <version>440a3cc</version>
+            <version>0.3.7-alpha</version>
         </dependency>
     </dependencies>
 </project>
