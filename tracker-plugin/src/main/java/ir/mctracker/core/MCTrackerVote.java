@@ -11,7 +11,6 @@ import ir.mctracker.core.database.DataSource;
 import ir.mctracker.core.database.models.Vote;
 import ir.mctracker.core.tasks.FetchAPI;
 import ir.mctracker.core.tasks.RedeemRewards;
-import ir.mctracker.core.utilities.Metrics;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -53,8 +52,6 @@ public final class MCTrackerVote extends MegaPlugin {
 
         new FetchAPI().runTaskTimerAsynchronously(getInstance(), 0, Config.CYCLE);
         new RedeemRewards().runTaskTimer(getInstance(), 0, Config.CYCLE / 2);
-
-        new Metrics(getInstance(), 12780);
     }
 
     @Override
