@@ -15,7 +15,7 @@ public class RedeemRewards extends BukkitRunnable {
     @Override
     public void run() {
         for (Vote vote : Vote.getUnredeemed()) {
-            Player player = Bukkit.getPlayer(vote.getUsername());
+            Player player = Bukkit.getPlayerExact(vote.getUsername());
             if (player != null) {
                 PlayerVoteEvent voteEvent = new PlayerVoteEvent(Bukkit.getOfflinePlayer(player.getUniqueId()));
                 Bukkit.getPluginManager().callEvent(voteEvent);
