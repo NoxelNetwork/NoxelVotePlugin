@@ -30,6 +30,9 @@ public class Util {
             try {
                 URL u = new URL(url);
                 con = (HttpsURLConnection) u.openConnection();
+                con.setConnectTimeout(10_000);
+                con.setReadTimeout(15_000);
+                con.setRequestProperty("User-Agent", "MCTrackerVote");
                 con.connect();
                 br = new BufferedReader(new InputStreamReader(con.getInputStream()));
             } catch (UnknownHostException | FileNotFoundException exception) {
