@@ -1,27 +1,25 @@
-# NoxelVoteSystem
+# NoxelVote
 
-NoxelVoteing System forked from offical IRMCTracke ,  plugin for handling player votes server-side
+Server-side vote handling for **NoxelSMP**, with an API for other plugins. Forked from the official IRMCTracker plugin and reworked by [Macronis](https://github.com/Xenos-core) for Folia.
 
-## Documentations
+## ✅ Compatibility
 
-Fully changed by Macronis to fit for NoxelSMP
+| Platform | Version | Java |
+|---|---|---|
+| NoxelPufferfish (Folia-safe) | 26.1.2 | 25 |
 
-## Downloads
+## 📦 Download
 
-You can download the latest build from github or compile your own version
+Grab the latest build from [Releases](../../releases), or build it yourself.
 
-## Before using the plugin
+## ⚙️ Setup
 
-Don't forget to update your **server_id** in config.yml on first installation. If you're not sure about your server id
-please contact us via discord tickers.
+1. Drop the jar into your `plugins/` folder and start the server.
+2. Open `config.yml` and set your **`server_id`**.
+3. Restart.
 
-Tested MineCraft Version
+Not sure of your server ID? Open a ticket on our Discord, or message **@RiftFox_YT** on Telegram for setup help.
 
-- NoxelPufferfish  26.1.2 (Java 25 ~ Folia Safe regions / over the bukkit syc)
+## 📄 License
 
- It's recommended to use contact me on telegram @RiftFox_YT for setuping this 
-
-## License
-
-All rights are reserved and it is not Open Source or Free. You cannot modify or redistribute this code without explicit
-permission from the copyright holder
+All rights reserved to IRMCTracker . This code isn't open source: you may not modify or redistribute it without written permission from the copyright holder.
